@@ -7,7 +7,7 @@ item_count = int(input("Number of items :"))
 # if item_count is -ive
 while item_count < 0:
     print("Invalid number of items!")
-    item_count = int(input("Number of items :."))
+    item_count = int(input("Number of items :"))
 
 # obtaining price of items
 for i in range(0,item_count):
