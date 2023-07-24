@@ -54,7 +54,7 @@ def is_valid_password(password):
         for symbol in SPECIAL_CHARACTERS:
             if char == symbol:
                 count_special = 1
-    ]
+
     if (count_length, count_digit, count_upper, count_lower, count_special) == (1, 1, 1, 1, 1):
         print("PASS")
     return True
