@@ -1,14 +1,6 @@
 """
 CP1404/CP5632 Practical
 Starter code for cumulative total income program
-
-want: cal monthly cumulative total
-
-require:
-get no of monthly income
-get each mth income
-store in list
-display list of mth income and cumulative total
 """
 
 
