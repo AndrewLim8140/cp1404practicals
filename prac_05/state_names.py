@@ -14,7 +14,7 @@ for i in range(0,len(CODE_TO_NAME)):
     state_long_ver=CODE_TO_NAME.get(state_abbreviations)
     print(f"{state_abbreviations:<3} is {state_long_ver:<}")
 
-state_code = input("Enter short state: ")
+state_code = input("Enter short state: ").upper()
 
 ##while state_code != "":
 ##    state_code = state_code.upper()
@@ -25,14 +25,13 @@ state_code = input("Enter short state: ")
 ##    state_code = input("Enter short state: ")
 
 while state_code != "":
-    state_code = state_code.upper()
-    print('1')
+
     try :
         print(f"{state_code:<3} is {CODE_TO_NAME[state_code]:<}")
-        print('2')
+
 
     except KeyError:
         print('invalid short state')
-        print('3')
-    state_code = input("Enter short state: ")
+
+    state_code = input("Enter short state: ").upper()
 
