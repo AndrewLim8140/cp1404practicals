@@ -1,6 +1,14 @@
 """
 CP1404/CP5632 Practical
 Starter code for cumulative total income program
+
+want: cal monthly cumulative total
+
+require:
+get no of monthly income
+get each mth income
+store in list
+display list of mth income and cumulative total
 """
 
 
@@ -14,18 +22,23 @@ def main():
         incomes.append(income)
 
     print("\nIncome Report\n-------------")
+    print_report(incomes, number_of_month,monthly_totals)
+
+
+    for month in range(1,number_of_month + 1):
+        income = incomes[month-1]
+        current_total = monthly_totals[month-1]
+        print("Month {:2} - Income: ${:10.2f} Total: ${:10.2f}".format(month, income, current_total))
+
+
+def print_report(incomes, number_of_month,monthly_totals):
     total = 0
     for month in range(1, number_of_month + 1):
-        monthly_components=[]
         income = incomes[month - 1]
         total += income
-        monthly_components.extend([month,income,total])
-        monthly_totals.append(monthly_components)
-    print_report(monthly_totals)
-
-def print_report(monthly_totals):
-    for i in range(0,len(monthly_totals)):
-        print(f"Month{monthly_totals[i][0]:2} - Income: ${monthly_totals[i][1]:.2f} Total: ${monthly_totals[i][2]:.2f}")
+        monthly_totals.append(total)
+        print(monthly_totals)
+    return(monthly_totals)
 
 
 main()
