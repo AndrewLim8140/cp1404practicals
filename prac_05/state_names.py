@@ -6,13 +6,13 @@
 
 # TODO: Reformat this file so the dictionary code follows PEP 8 convention
 CODE_TO_NAME = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",
-            "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania"}
+                "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania"}
 ##print(CODE_TO_NAME)
 
 for i in range(0,len(CODE_TO_NAME)):
-    STATE_ABBREVIATIONS=list(CODE_TO_NAME.keys())[i]
-    STATE_LONG=CODE_TO_NAME.get(STATE_ABBREVIATIONS)
-    print(f"{STATE_ABBREVIATIONS:<3} is {STATE_LONG:<}")
+    state_abbreviations=list(CODE_TO_NAME.keys())[i]
+    state_long_ver=CODE_TO_NAME.get(state_abbreviations)
+    print(f"{state_abbreviations:<3} is {state_long_ver:<}")
 
 state_code = input("Enter short state: ")
 
