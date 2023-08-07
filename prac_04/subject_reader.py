@@ -8,8 +8,6 @@ consolidated_data=[]
 input_file = open(FILENAME)
 def main():
     data = get_data()
-    print(data)
-    print(consolidated_data)
     assign_respective_class()
 
     input_file.close()

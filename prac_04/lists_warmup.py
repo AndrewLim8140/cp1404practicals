@@ -12,11 +12,14 @@ numbers = [3,1,4,1,5,9,2]
 
 """ First element to ten """
 numbers[0]='ten'
+print(numbers)
 
 """ Last element to 1"""
 numbers[-1]=1
+print(numbers)
 
-""" what? """
-numbers[2:] 
+""" all except first 2 elemet """
+print(numbers[2:])
+
 """ 9 is a element of numbers """
-9 in numbers
+print(9 in numbers)
