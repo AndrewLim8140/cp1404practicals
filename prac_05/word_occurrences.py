@@ -1,3 +1,8 @@
+"""
+Word Occurrences
+Estimate: 15 minutes
+Actual:   28 minutes
+"""
 word_dic = {}
 max_word_length = 0
 
