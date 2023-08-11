@@ -1,4 +1,5 @@
 word_dic = {}
+max_word_length = 0
 
 text_list = input("Text :").split(" ")
 text_list.sort()
@@ -13,5 +14,12 @@ for word in text_list:
         """ if its the first entry of word"""
         word_dic[word] = 1
 
+    """ length of longest"""
+    word_length = len(word)
+    if word_length > max_word_length:
+        max_word_length = int(word_length)
+
 for word in word_dic:
-    print('{word} : {count}'.format(word=word, count=word_dic[word]))
+    count = word_dic[word]
+    length = max_word_length
+    print(f"{word:<{length}} : {count}")
