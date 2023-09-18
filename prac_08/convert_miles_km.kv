@@ -1,0 +1,33 @@
+BoxLayout:
+    orientation:'vertical'
+    BoxLayout:
+        orientation:'horizontal'
+
+        TextInput:
+            text:''
+            id:input_miles
+            on_text:
+                app.miles_conversion(input_miles.text)
+
+
+        BoxLayout:
+            orientation:'vertical'
+
+            Button:
+                text:'Up'
+                on_press:app.miles_increment(input_miles.text,1)
+                on_release:app.miles_conversion(input_miles.text)
+
+            Button:
+                text:'Down'
+                on_press:app.miles_increment(input_miles.text,-1)
+                on_release:app.miles_conversion(input_miles.text)
+#    Button:
+#        text:'Convert Miles to KM'
+#        on_press:app.miles_conversion(input_miles.text)
+
+    Label:
+        text: ''
+        id:output_results
+#        color:(1,1,.45,1)
+        font_size:15
